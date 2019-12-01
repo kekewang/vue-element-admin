@@ -1,6 +1,12 @@
 export default {
   route: {
     dashboard: '首页',
+    fans: '涨粉',
+    bind: '账号授权',
+    fansManage: '粉丝管理',
+    media: '素材',
+    promote: '运营',
+    channel: '渠道',
     documentation: '文档',
     guide: '引导页',
     permission: '权限测试页',
@@ -171,5 +177,34 @@ export default {
     tagsView: '开启 Tags-View',
     fixedHeader: '固定 Header',
     sidebarLogo: '侧边栏 Logo'
+  },
+  media: {
+    placeholder: '请输入素材名称',
+    sync: '同步'
+  },
+  channel: {
+    add: '手动绑定',
+    thirdBind: '第三方绑定',
+    name: '请输入渠道名称',
+    type: '渠道类型',
+    typePlaceholder: '请选择渠道类型',
+    appid: '应用ID',
+    appidPlaceholder: '请输入渠道ID',
+    agentid: '子应用ID',
+    agentidPlaceholder: '请输入子应用ID',
+    appsecret: '开发者密码',
+    appsecretPlaceholder: '请输入应用开发者密码',
+    encoding: '消息加密密钥',
+    encodingPlaceholder: '请输入消息加密密钥',
+    token: '令牌',
+    tokenPlaceholder: '请输入令牌',
+    encryptType: '消息加解密方式',
+    encryptTypePlaceholder: '请选择消息加解密方式',
+    plaintext: '明文模式',
+    compatibility: '兼容模式',
+    security: '安全模式'
+  },
+  message: {
+    required: '为必传项'
   }
 }

@@ -121,7 +121,51 @@ export const constantRoutes = [
         meta: { title: 'profile', icon: 'user', noCache: true }
       }
     ]
-  }
+  },
+  {
+    path: '/channel',
+    component: Layout,
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'channel',
+      icon: 'fans'
+    },
+    children: [
+      {
+        path: 'bind',
+        component: () => import('@/views/channel/bind'),
+        name: 'Channel',
+        meta: {
+          title: 'bind',
+          icon: 'channel',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      },
+      {
+        path: 'add',
+        component: () => import('@/views/channel/add'),
+        hidden: true
+      }
+    ]
+  },
+  {
+    path: '/fans',
+    component: Layout,
+    name: 'Fans',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'fans',
+      icon: 'fans'
+    },
+    children: [
+      {
+        path: 'manage',
+        component: () => import('@/views/fans/fans-manage'),
+        name: 'FansManage',
+        meta: { title: 'fansManage', icon: 'fans-manage', noCache: true }
+      }
+    ]
+  },
 ]
 
 /**
@@ -166,6 +210,40 @@ export const asyncRoutes = [
         meta: {
           title: 'rolePermission',
           roles: ['admin']
+        }
+      }
+    ]
+  },
+
+  {
+    path: '/media',
+    component: Layout,
+    children: [
+      {
+        path: 'media',
+        component: () => import('@/views/media/index'),
+        name: 'Media',
+        meta: {
+          title: 'media',
+          icon: 'media',
+          roles: ['admin'] // or you can only set roles in sub nav
+        }
+      }
+    ]
+  },
+
+  {
+    path: '/promote',
+    component: Layout,
+    children: [
+      {
+        path: 'promote',
+        component: () => import('@/views/promote/index'),
+        name: 'Promote',
+        meta: {
+          title: 'promote',
+          icon: 'media',
+          roles: ['admin'] // or you can only set roles in sub nav
         }
       }
     ]
